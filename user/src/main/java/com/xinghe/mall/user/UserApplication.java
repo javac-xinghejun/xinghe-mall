@@ -1,8 +1,11 @@
 package com.xinghe.mall.user;
 
+import com.xinghe.mall.user.config.NacosConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 描述
@@ -15,6 +18,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 public class UserApplication {
     public static void main(String[] args) {
-        SpringApplication.run(UserApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(UserApplication.class, args);
+        NacosConfig nacosConfig = context.getBean("nacosConfig", NacosConfig.class);
+        System.out.println(nacosConfig);
     }
 }
