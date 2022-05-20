@@ -14,7 +14,6 @@ import org.springframework.context.annotation.Configuration;
  * @since [版本号]
  */
 @Configuration
-@EnableNacosDiscovery(globalProperties = @NacosProperties(serverAddr = "127.0.0.1:8848"))
 @EnableNacosConfig(globalProperties = @NacosProperties(serverAddr = "127.0.0.1:8848"))
 @NacosPropertySource(dataId = "xinghe-mall-user", autoRefreshed = true)
 public class NacosConfig {

@@ -19,7 +19,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class UserApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(UserApplication.class, args);
-        NacosConfig nacosConfig = context.getBean("nacosConfig", NacosConfig.class);
-        System.out.println(nacosConfig);
+//        NacosConfig nacosConfig = context.getBean("nacosConfig", NacosConfig.class);
+//        System.out.println(nacosConfig);
     }
 }
